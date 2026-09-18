@@ -24,8 +24,9 @@ and interactions in `static/css/index.css` and `static/js/index.js`.
 ## Content
 
 The author list, affiliations, abstract, figures, and results follow the GCPR
-2026 camera-ready paper. Paper figures are rasterized from the original PDFs
-for browser display. The existing stylized videos are retained.
+2026 camera-ready paper. Paper figures are cropped from the camera-ready paper and exported as PNGs
+without page margins, headers, or captions. To regenerate them (requires
+Poppler and ImageMagick), run `python3 scripts/export_paper_figures.py`. The existing stylized videos are retained.
 
 ## Attribution
 
