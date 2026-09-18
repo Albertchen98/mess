@@ -751,3 +751,79 @@ a:focus {
 
 
 
+
+/* Paper figures and results scale to desktop and mobile screens. */
+.affiliations {
+  margin-top: 1rem;
+}
+
+.affiliations .author-block {
+  margin: 0.2rem 0.5rem;
+}
+
+.corresponding-author {
+  margin: 0.8rem 0;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.center-image,
+.research-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.teaser figcaption {
+  margin-top: 1.25rem;
+  line-height: 1.6;
+}
+
+.content .research-figure {
+  margin: 1.5rem 0;
+}
+
+.research-figure figcaption,
+.result-note,
+.results-table caption {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.results-table caption {
+  text-align: left;
+  padding-bottom: 0.75rem;
+}
+
+.results-table th,
+.results-table td {
+  white-space: nowrap;
+}
+
+.results-table .ours {
+  background: #eaf2ff;
+}
+
+.research-content li + li {
+  margin-top: 0.8rem;
+}
+
+.video-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.video-grid video {
+  display: block;
+  width: 100%;
+  border-radius: var(--border-radius);
+  background: #111;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

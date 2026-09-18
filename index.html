@@ -3,455 +3,344 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <!-- Primary Meta Tags -->
-  <!-- TODO: Replace with your paper title and author names -->
-  <meta name="title" content="MeSS: City Mesh-Guided Outdoor Scene Generation with Cross-View Consistent Diffusion
- - Xuyang Chen, Zhijun Zhai, Kaixuan Zhou, Zengmao Wang, Jianan He, Dong Wang, Yanfeng Zhang, mingwei Sun, Rüdiger Westermann, Konrad Schindler, Liqiu Meng">
-  <!-- TODO: Write a compelling 150-160 character description of your research -->
-  <meta name="description" content="Scene Mesh texture generation">
-  <!-- TODO: Add 5-10 relevant keywords for your research area -->
-  <meta name="keywords" content="T2I, 3DGS, 3DV, computer vision, AI">
-  <!-- TODO: List all authors -->
-  <meta name="author" content="Xuyang Chen, Zhijun Zhai, Kaixuan Zhou, Zengmao Wang, Jianan He, Dong Wang, Yanfeng Zhang, mingwei Sun, Rüdiger Westermann, Konrad Schindler, Liqiu Meng">
+  <title>MeSS: City Mesh-Guided Outdoor Scene Generation with Cross-View Consistent Diffusion | Accepted at GCPR 2026</title>
+  <meta name="description" content="Accepted at GCPR 2026. MeSS turns textureless city meshes into geometry-aligned 3D Gaussian Splatting scenes with cross-view consistent diffusion.">
+  <meta name="author" content="Xuyang Chen, Zhijun Zhai, Kaixuan Zhou, Zengmao Wang, Jianan He, Dong Wang, Yanfeng Zhang, Mingwei Sun, Xuqin Wang, Rüdiger Westermann, Tao Wu, Konrad Schindler, Liqiu Meng">
+  <meta name="keywords" content="MeSS, scene generation, city meshes, 3D Gaussian Splatting, ControlNet, diffusion, cross-view consistency">
   <meta name="robots" content="index, follow">
-  <meta name="language" content="English">
-  
-  <!-- Open Graph / Facebook -->
+  <link rel="canonical" href="https://albertchen98.github.io/mess/">
   <meta property="og:type" content="article">
-  <!-- TODO: Replace with your institution or lab name -->
-  <meta property="og:site_name" content="TU Munich">
-  <!-- TODO: Same as paper title above -->
+  <meta property="og:site_name" content="MeSS">
   <meta property="og:title" content="MeSS: City Mesh-Guided Outdoor Scene Generation with Cross-View Consistent Diffusion">
-  <!-- TODO: Same as description above -->
-  <meta property="og:description" content="City Mesh texture generation">
-  <!-- TODO: Replace with your actual website URL -->
+  <meta property="og:description" content="Accepted at GCPR 2026. MeSS turns textureless city meshes into geometry-aligned 3D Gaussian Splatting scenes with cross-view consistent diffusion.">
   <meta property="og:url" content="https://albertchen98.github.io/mess/">
-  <!-- TODO: Create a 1200x630px preview image and update path -->
-  <meta property="og:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Mess- Research Preview">
-  <meta property="article:published_time" content="2024-01-01T00:00:00.000Z">
-  <meta property="article:author" content="Xuyang CHen">
-  <meta property="article:section" content="Research">
-  <meta property="article:tag" content="T2I">
-  <meta property="article:tag" content="3DGS">
-
-  <!-- Twitter -->
+  <meta property="og:image" content="https://albertchen98.github.io/mess/static/images/coverfigure.png">
+  <meta property="og:image:alt" content="MeSS generates Gaussian Splatting scenes and stylized views from textureless city meshes.">
   <meta name="twitter:card" content="summary_large_image">
-  <!-- TODO: Replace with your lab/institution Twitter handle -->
-  <meta name="twitter:site" content="@YOUR_TWITTER_HANDLE">
-  <!-- TODO: Replace with first author's Twitter handle -->
-  <meta name="twitter:creator" content="@AUTHOR_TWITTER_HANDLE">
-  <!-- TODO: Same as paper title above -->
-  <meta name="twitter:title" content="PAPER_TITLE">
-  <!-- TODO: Same as description above -->
-  <meta name="twitter:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Same as social preview image above -->
-  <meta name="twitter:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
-  <meta name="twitter:image:alt" content="PAPER_TITLE - Research Preview">
-
-  <!-- Academic/Research Specific -->
-  <meta name="citation_title" content="Mess">
-  <meta name="citation_author" content="Chen, Xuyang">
-  <meta name="citation_publication_date" content="2025">
-  <meta name="citation_conference_title" content="CONFERENCE_NAME">
-  <meta name="citation_pdf_url" content="https://YOUR_DOMAIN.com/static/pdfs/paper.pdf">
-  
-  <!-- Additional SEO -->
+  <meta name="twitter:title" content="MeSS: City Mesh-Guided Outdoor Scene Generation with Cross-View Consistent Diffusion">
+  <meta name="twitter:description" content="Accepted at GCPR 2026. MeSS turns textureless city meshes into geometry-aligned 3D Gaussian Splatting scenes with cross-view consistent diffusion.">
+  <meta name="twitter:image" content="https://albertchen98.github.io/mess/static/images/coverfigure.png">
+  <meta name="twitter:image:alt" content="Mesh-guided outdoor scene generation with MeSS">
+  <meta name="citation_title" content="MeSS: City Mesh-Guided Outdoor Scene Generation with Cross-View Consistent Diffusion">
+  <meta name="citation_author" content="Xuyang Chen">
+  <meta name="citation_author" content="Zhijun Zhai">
+  <meta name="citation_author" content="Kaixuan Zhou">
+  <meta name="citation_author" content="Zengmao Wang">
+  <meta name="citation_author" content="Jianan He">
+  <meta name="citation_author" content="Dong Wang">
+  <meta name="citation_author" content="Yanfeng Zhang">
+  <meta name="citation_author" content="Mingwei Sun">
+  <meta name="citation_author" content="Xuqin Wang">
+  <meta name="citation_author" content="Rüdiger Westermann">
+  <meta name="citation_author" content="Tao Wu">
+  <meta name="citation_author" content="Konrad Schindler">
+  <meta name="citation_author" content="Liqiu Meng">
+  <meta name="citation_publication_date" content="2026">
+  <meta name="citation_conference_title" content="German Conference on Pattern Recognition (GCPR)">
+  <meta name="citation_pdf_url" content="https://albertchen98.github.io/mess/static/pdfs/mess-gcpr2026.pdf">
   <meta name="theme-color" content="#2563eb">
-  <meta name="msapplication-TileColor" content="#2563eb">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  
-  <!-- Preconnect for performance -->
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://ajax.googleapis.com">
-  <link rel="preconnect" href="https://documentcloud.adobe.com">
-  <link rel="preconnect" href="https://cdn.jsdelivr.net">
-
-
-  <!-- TODO: Replace with your paper title and authors -->
-  <title>MeSS - Xuyang Chen | Academic Research</title>
-  
-  <!-- Favicon and App Icons -->
-  <link rel="icon" type="image/x-icon" href="static/images/stewie.jpg">
-  <link rel="apple-touch-icon" href="static/images/stewie.jpg">
-  
-  <!-- Critical CSS - Load synchronously -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/index.css">
-  
-  <!-- Non-critical CSS - Load asynchronously -->
-  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  
-  <!-- Fallback for browsers that don't support preload -->
-  <noscript>
-    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
-    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
-    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  </noscript>
-  
-  <!-- Fonts - Optimized loading -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  
-  <!-- Defer non-critical JavaScript -->
-  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script defer src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
   <script defer src="static/js/fontawesome.all.min.js"></script>
-  <script defer src="static/js/bulma-carousel.min.js"></script>
-  <script defer src="static/js/bulma-slider.min.js"></script>
   <script defer src="static/js/index.js"></script>
-  
-  <!-- Structured Data for Academic Papers -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ScholarlyArticle",
-    "headline": "PAPER_TITLE",
-    "description": "BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS",
-    "author": [
-      {
-        "@type": "Person",
-        "name": "FIRST_AUTHOR_NAME",
-        "affiliation": {
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "headline": "MeSS: City Mesh-Guided Outdoor Scene Generation with Cross-View Consistent Diffusion",
+  "description": "Accepted at GCPR 2026. MeSS turns textureless city meshes into geometry-aligned 3D Gaussian Splatting scenes with cross-view consistent diffusion.",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Xuyang Chen",
+      "affiliation": [
+        {
           "@type": "Organization",
-          "name": "INSTITUTION_NAME"
-        }
-      },
-      {
-        "@type": "Person",
-        "name": "SECOND_AUTHOR_NAME",
-        "affiliation": {
+          "name": "Huawei Hilbert Research Center"
+        },
+        {
           "@type": "Organization",
-          "name": "INSTITUTION_NAME"
+          "name": "Technical University of Munich"
         }
-      }
-    ],
-    "datePublished": "2024-01-01",
-    "publisher": {
-      "@type": "Organization",
-      "name": "CONFERENCE_OR_JOURNAL_NAME"
+      ]
     },
-    "url": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE",
-    "image": "https://YOUR_DOMAIN.com/static/images/social_preview.png",
-    "keywords": ["KEYWORD1", "KEYWORD2", "KEYWORD3", "machine learning", "computer vision"],
-    "abstract": "FULL_ABSTRACT_TEXT_HERE",
-    "citation": "BIBTEX_CITATION_HERE",
-    "isAccessibleForFree": true,
-    "license": "https://creativecommons.org/licenses/by/4.0/",
-    "mainEntity": {
-      "@type": "WebPage",
-      "@id": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE"
+    {
+      "@type": "Person",
+      "name": "Zhijun Zhai",
+      "affiliation": [
+        {
+          "@type": "Organization",
+          "name": "Wuhan University"
+        }
+      ]
     },
-    "about": [
-      {
-        "@type": "Thing",
-        "name": "RESEARCH_AREA_1"
-      },
-      {
-        "@type": "Thing", 
-        "name": "RESEARCH_AREA_2"
-      }
-    ]
+    {
+      "@type": "Person",
+      "name": "Kaixuan Zhou",
+      "affiliation": [
+        {
+          "@type": "Organization",
+          "name": "Huawei Hilbert Research Center"
+        }
+      ]
+    },
+    {
+      "@type": "Person",
+      "name": "Zengmao Wang",
+      "affiliation": [
+        {
+          "@type": "Organization",
+          "name": "Wuhan University"
+        }
+      ]
+    },
+    {
+      "@type": "Person",
+      "name": "Jianan He",
+      "affiliation": [
+        {
+          "@type": "Organization",
+          "name": "Huawei Hilbert Research Center"
+        }
+      ]
+    },
+    {
+      "@type": "Person",
+      "name": "Dong Wang",
+      "affiliation": [
+        {
+          "@type": "Organization",
+          "name": "Huawei Hilbert Research Center"
+        }
+      ]
+    },
+    {
+      "@type": "Person",
+      "name": "Yanfeng Zhang",
+      "affiliation": [
+        {
+          "@type": "Organization",
+          "name": "Huawei Hilbert Research Center"
+        }
+      ]
+    },
+    {
+      "@type": "Person",
+      "name": "Mingwei Sun",
+      "affiliation": [
+        {
+          "@type": "Organization",
+          "name": "Huawei Hilbert Research Center"
+        },
+        {
+          "@type": "Organization",
+          "name": "Wuhan University"
+        }
+      ]
+    },
+    {
+      "@type": "Person",
+      "name": "Xuqin Wang",
+      "affiliation": [
+        {
+          "@type": "Organization",
+          "name": "Huawei Hilbert Research Center"
+        },
+        {
+          "@type": "Organization",
+          "name": "Technical University of Munich"
+        }
+      ]
+    },
+    {
+      "@type": "Person",
+      "name": "Rüdiger Westermann",
+      "affiliation": [
+        {
+          "@type": "Organization",
+          "name": "Technical University of Munich"
+        }
+      ]
+    },
+    {
+      "@type": "Person",
+      "name": "Tao Wu",
+      "affiliation": [
+        {
+          "@type": "Organization",
+          "name": "Huawei Hilbert Research Center"
+        }
+      ]
+    },
+    {
+      "@type": "Person",
+      "name": "Konrad Schindler",
+      "affiliation": [
+        {
+          "@type": "Organization",
+          "name": "ETH Zurich"
+        }
+      ]
+    },
+    {
+      "@type": "Person",
+      "name": "Liqiu Meng",
+      "affiliation": [
+        {
+          "@type": "Organization",
+          "name": "Technical University of Munich"
+        }
+      ]
+    }
+  ],
+  "url": "https://albertchen98.github.io/mess/",
+  "image": "https://albertchen98.github.io/mess/static/images/coverfigure.png",
+  "abstract": "Mesh models have become increasingly accessible for numerous cities; however, the lack of realistic textures restricts their application in virtual urban navigation and autonomous driving. Texturing them with generative models remains difficult: existing video-diffusion and outpainting-based scene generators drift in appearance over long camera trajectories and cannot guarantee pixel-level alignment with the given city geometry. This paper proposes MeSS (Mesh-based Scene Synthesis), which converts a textureless city mesh into a high-quality, style-consistent 3D Gaussian Splatting (3DGS) scene. Our key insight is a control-distribution match: we train image ControlNets directly on mesh-rendered depth, normal, and semantic priors, so the control signals stay in-distribution for any deployed city mesh and yield tight geometry–appearance alignment. Building on this, three cross-view consistency mechanisms counter appearance drift: Cascaded Outpainting CtrlNets generate geometrically consistent sparse key views; Appearance Guided Inpainting (AGInpaint) densifies the scene with intermediate views; and Global Consistency Alignment (GCAlign) removes global inconsistencies such as exposure shifts. Concurrently with generation, the 3DGS scene is reconstructed by initializing Gaussian surfels on the mesh surface. On a city-scale benchmark from the UE5 City Sample Project, MeSS reduces cross-view LPIPS by 31% and KID by 36% relative to the best competing method on each metric, achieving an FID of 28.17, and it transfers zero-shot to a real LoD3 city mesh. Once synthesized, the scene can be rendered in diverse styles through relighting and style transfer.",
+  "isAccessibleForFree": true,
+  "encoding": {
+    "@type": "MediaObject",
+    "contentUrl": "https://albertchen98.github.io/mess/static/pdfs/mess-gcpr2026.pdf",
+    "encodingFormat": "application/pdf"
   }
-  </script>
-  
-  <!-- Website/Organization Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "INSTITUTION_OR_LAB_NAME",
-    "url": "https://YOUR_INSTITUTION_WEBSITE.com",
-    "logo": "https://YOUR_DOMAIN.com/static/images/favicon.ico",
-    "sameAs": [
-      "https://twitter.com/YOUR_TWITTER_HANDLE",
-      "https://github.com/YOUR_GITHUB_USERNAME"
-    ]
-  }
+}
   </script>
 </head>
 <body>
-
-
-  <!-- Scroll to Top Button -->
-  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
-    <i class="fas fa-chevron-up"></i>
-  </button>
-
-  <!-- More Works Dropdown -->
-  <div class="more-works-container">
-    <button class="more-works-btn" onclick="toggleMoreWorks()" title="View More Works from Our Lab">
-      <i class="fas fa-flask"></i>
-      More Works
-      <i class="fas fa-chevron-down dropdown-arrow"></i>
-    </button>
-    <div class="more-works-dropdown" id="moreWorksDropdown">
-      <div class="dropdown-header">
-        <h4>More Works from Our Lab</h4>
-        <button class="close-btn" onclick="toggleMoreWorks()">
-          <i class="fas fa-times"></i>
-        </button>
-      </div>
-      <div class="works-list">
-        <!-- TODO: Replace with your lab's related works -->
-        <a href="https://arxiv.org/abs/PAPER_ID_1" class="work-item" target="_blank">
-          <div class="work-info">
-            <!-- TODO: Replace with actual paper title -->
-            <h5>Paper Title 1</h5>
-            <!-- TODO: Replace with brief description -->
-            <p>Brief description of the work and its main contribution.</p>
-            <!-- TODO: Replace with venue and year -->
-            <span class="work-venue">Conference/Journal 2024</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <!-- TODO: Add more related works or remove extra items -->
-        <a href="https://arxiv.org/abs/PAPER_ID_2" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 2</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <a href="https://arxiv.org/abs/PAPER_ID_3" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 3</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-      </div>
-    </div>
-  </div>
-
+  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top"><i class="fas fa-chevron-up" aria-hidden="true"></i></button>
   <main id="main-content">
-  <section class="hero">
-    <div class="hero-body">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered">
-          <div class="column has-text-centered">
-            <!-- TODO: Replace with your paper title -->
-            <h1 class="title is-1 publication-title">MeSS: City Mesh-Guided Outdoor Scene Generation with Cross-View Consistent Diffusion
-</h1>
-            <div class="is-size-5 publication-authors">
-
-              <!-- TODO: Replace with your paper authors and their personal links -->
-              <span class="author-block">
-                <a href="https://scholar.google.com/citations?user=NOsYwHQAAAAJ&hl=en" target="_blank">Xuyang Chen</a><sup>1,3</sup>,</span>
-                <span class="author-block">
-                  <a href="https://albertchen98.github.io/mess/" target="_blank">Zhijun Zhai</a><sup>2</sup>,</span>
-                  <span class="author-block">
-                    <a href="https://scholar.google.com/citations?user=tULFrA4AAAAJ&hl=en" target="_blank">Kaixuan Zhou</a><sup>3</sup></span>
-                    <span class="author-block">
-                    <a href="https://scholar.google.com/citations?user=tTqiJpQAAAAJ&hl=en" target="_blank">Zengmao Wang</a><sup>2</sup></span>
-                    <span class="author-block">
-                    <a href="https://albertchen98.github.io/mess/" target="_blank">Jianan He</a><sup>3</sup></span>
-                    <span class="author-block">
-                    <a href="https://albertchen98.github.io/mess/" target="_blank">Dong Wang</a><sup>3</sup></span>
-                    <span class="author-block">
-                    <a href="https://albertchen98.github.io/mess/" target="_blank">Yanfeng Zhang</a><sup>3</sup></span>
-                    <span class="author-block">
-                    <a href="https://albertchen98.github.io/mess/" target="_blank">Mingwei Sun</a><sup>2,3</sup></span>
-                    <span class="author-block">
-                    <a href="https://scholar.google.com/citations?user=a8YUuWwAAAAJ&hl=en" target="_blank">Rüdiger Westermann</a><sup>1</sup></span>
-                    <span class="author-block">
-                    <a href="https://scholar.google.com/citations?user=FZuNgqIAAAAJ&hl=en" target="_blank">Konrad Schindler</a><sup>4</sup></span>
-                    <span class="author-block">
-                    <a href="https://www.asg.ed.tum.de/en/lfk/team/members/liqiu-meng/" target="_blank">Liqiu Meng</a><sup>1</sup></span>
-                  </div>
-
-                  <div class="is-size-5 publication-authors">
-                    <!-- TODO: Replace with your institution and conference/journal info -->
-                     <span class="author-block"><sup>1</sup>TU Munich</span>
-                     <span class="author-block"><sup>2</sup>Wuhan University</span>
-                     <span class="author-block"><sup>3</sup>Huawei Riemann Lab</span>
-                     <span class="author-block"><sup>4</sup>ETH Zurich</span>
-                     <br>Arxiv
-                    <!-- TODO: Remove this line if no equal contribution -->
-                     
-                  </div>
-
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-                         <!-- TODO: Update with your arXiv paper ID -->
-                      <span class="link-block">
-                        <a href="https://arxiv.org/pdf/2508.15169.pdf" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>Paper</span>
-                      </a>
-                    </span>
-
-
-                  <!-- TODO: Replace with your GitHub repository URL -->
-                  <span class="link-block">
-                    <a href="https://albertchen98.github.io/mess/" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code</span>
-                  </a>
-                </span>
-
-                <!-- TODO: Update with your arXiv paper ID -->
-                <span class="link-block">
-                  <a href="https://arxiv.org/abs/2508.15169.pdf" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
-            </div>
+    <section class="hero publication-header">
+      <div class="hero-body">
+        <div class="container is-max-desktop has-text-centered">
+          <h1 class="title is-1 publication-title">MeSS: City Mesh-Guided Outdoor Scene Generation with Cross-View Consistent Diffusion</h1>
+          <p class="publication-venue">Accepted at GCPR 2026</p>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><a href="https://scholar.google.com/citations?user=NOsYwHQAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Xuyang Chen</a><sup>1,2,*</sup>,</span>
+            <span class="author-block">Zhijun Zhai<sup>3</sup>,</span>
+            <span class="author-block"><a href="https://scholar.google.com/citations?user=tULFrA4AAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Kaixuan Zhou</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="https://scholar.google.com/citations?user=tTqiJpQAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Zengmao Wang</a><sup>3</sup>,</span>
+            <span class="author-block">Jianan He<sup>1</sup>,</span>
+            <span class="author-block">Dong Wang<sup>1</sup>,</span>
+            <span class="author-block">Yanfeng Zhang<sup>1</sup>,</span>
+            <span class="author-block">Mingwei Sun<sup>1,3</sup>,</span>
+            <span class="author-block">Xuqin Wang<sup>1,2</sup>,</span>
+            <span class="author-block"><a href="https://scholar.google.com/citations?user=a8YUuWwAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Rüdiger Westermann</a><sup>2</sup>,</span>
+            <span class="author-block">Tao Wu<sup>1</sup>,</span>
+            <span class="author-block"><a href="https://scholar.google.com/citations?user=FZuNgqIAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Konrad Schindler</a><sup>4</sup>,</span>
+            <span class="author-block"><a href="https://www.asg.ed.tum.de/en/lfk/team/members/liqiu-meng/" target="_blank" rel="noopener noreferrer">Liqiu Meng</a><sup>2</sup></span>
+          </div>
+          <div class="publication-authors affiliations">
+            <span class="author-block"><sup>1</sup>Huawei Hilbert Research Center</span>
+            <span class="author-block"><sup>2</sup>Technical University of Munich</span>
+            <span class="author-block"><sup>3</sup>Wuhan University</span>
+            <span class="author-block"><sup>4</sup>ETH Zurich</span>
+          </div>
+          <p class="corresponding-author">* Corresponding author: <a href="mailto:xuyang.chen@tum.de">Xuyang Chen</a></p>
+          <div class="publication-links">
+            <span class="link-block"><a href="static/pdfs/mess-gcpr2026.pdf" target="_blank" rel="noopener noreferrer" class="external-link button is-normal is-rounded is-dark"><span class="icon"><i class="fas fa-file-pdf" aria-hidden="true"></i></span><span>Paper</span></a></span>
+            <span class="link-block"><a href="static/pdfs/mess-gcpr2026-supp.pdf" target="_blank" rel="noopener noreferrer" class="external-link button is-normal is-rounded is-dark"><span class="icon"><i class="fas fa-file-alt" aria-hidden="true"></i></span><span>Supplement</span></a></span>
+            <span class="link-block"><a href="https://github.com/Albertchen98/mess-code" target="_blank" rel="noopener noreferrer" class="external-link button is-normal is-rounded is-dark"><span class="icon"><i class="fab fa-github" aria-hidden="true"></i></span><span>Code</span></a></span>
+            <span class="link-block"><a href="https://arxiv.org/abs/2508.15169" target="_blank" rel="noopener noreferrer" class="external-link button is-normal is-rounded is-dark"><span class="icon"><i class="fas fa-book-open" aria-hidden="true"></i></span><span>arXiv</span></a></span>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- Teaser video-->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <img src="static/images/coverfigure.png" class="center-image" alt="Teaser Figure"/>
-      <h2 class="subtitle has-text-centered">
-        Starting from textureless urban meshes, our MeSS synthesizes high-quality Gaussian Splatting Scenes with realistic appearance. After synthesis, these Gaussian scenes can be further rendered into stylized videos.
-      </h2>
-    </div>
-  </div>
-</section>
-<!-- End teaser video -->
-
-<!-- Paper abstract -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <!-- TODO: Replace with your paper abstract -->
-          <p>
-            Mesh models have become increasingly accessible for numerous cities; however, the lack of realistic textures restricts their application in virtual urban navigation and autonomous driving. To address this, this paper proposes MeSS (Meshbased Scene Synthesis) for generating high-quality, styleconsistent outdoor scenes with city mesh models serving as the geometric prior. While image and video diffusion models can leverage spatial layouts (such as depth maps or HD maps) as control conditions to generate street-level perspective views, they are not directly applicable to 3D scene generation. Video diffusion models excel at synthesizing consistent view sequences that depict scenes but often struggle to adhere to predefined camera paths or align accurately withrendered control videos. In contrast, image diffusion models, though unable to guarantee cross-view visual consistency,can produce more geometry-aligned results when combinedwith ControlNet. Building on this insight, our approach enhances image diffusion models by improving cross-view consistency. The pipeline comprises three key stages: first, wegenerate geometrically consistent sparse views using Cascaded Outpainting ControlNets; second, we propagate denserintermediate views via a component dubbed AGInpaint; andthird, we globally eliminate visual inconsistencies (e.g., varying exposure) using the GCAlign module. Concurrently withgeneration, a 3D Gaussian Splatting (3DGS) scene is reconstructed by initializing Gaussian balls on the mesh surface. Our method outperforms existing approaches in both geometric alignment and generation quality. Once synthesized,the scene can be rendered in diverse styles through relighting and style transfer techniques.
-          </p>
+    </section>
+    <section class="hero teaser" aria-label="Overview">
+      <div class="container is-max-desktop">
+        <div class="hero-body">
+          <figure>
+            <img src="static/images/coverfigure.png" class="center-image" alt="Textureless urban meshes transformed into realistic Gaussian Splatting scenes and stylized renderings.">
+            <figcaption class="subtitle has-text-centered">Starting from textureless urban meshes, MeSS synthesizes geometry-aligned 3D Gaussian Splatting scenes with consistent appearance across views. The generated scenes can also be relit and stylized.</figcaption>
+          </figure>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-<!-- End paper abstract -->
-
-<!-- Method-->
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        
-        <h2 class="title is-3">Method</h2>
-        
-        <div class="publication-image">
-          <img src="static/images/method.png" class="center-image" alt="Method Overview"/>
-        </div>
-        
-        <div class="content has-text-justified">
-          <p>
-            The MeSS pipeline is designed to synthetically generate viewpoints to reconstruct gaussian scene following a sparse-to-dense scheme. Given a 3D city map (i.e., a mesh model with semantic and instance labels but without texture), we specify a virtual camera path via a sequence of M views. In <strong>Stage I</strong>, we generate a subset of N key view images along the sequence via a warp-and-outpaint procedure: starting from the initial key frame generated by geometric conditioned <em>ControlNet-S</em>, each proceeding key frame is warped as an additional condition to the outpainting of new key frame with <em>ControlNet-N</em> (Sec. 3.2). After obtaining all key frames, we use them to construct a Gaussian field through optimizing gaussian surfels on the surface of mesh models. 
-            In <strong>Stage II</strong>, we render from gaussian scene the intermediate views between each pair of subsequent key views. Artifacts like silhouettes in intermediate frames are filled up by <em>Appearance Guided Inpainting </em>(Sec. 3.3). Lastly, <em>Global Consistency Alignment</em> (Sec. 3.4) further enhances the appearance consistency of gaussian surfels learned from different views.
-        </div>
-
+    </section>
+    <section class="section hero is-light">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">Abstract</h2>
+        <div class="content research-content"><p>Mesh models have become increasingly accessible for numerous cities; however, the lack of realistic textures restricts their application in virtual urban navigation and autonomous driving. Texturing them with generative models remains difficult: existing video-diffusion and outpainting-based scene generators drift in appearance over long camera trajectories and cannot guarantee pixel-level alignment with the given city geometry. This paper proposes MeSS (Mesh-based Scene Synthesis), which converts a textureless city mesh into a high-quality, style-consistent 3D Gaussian Splatting (3DGS) scene. Our key insight is a control-distribution match: we train image ControlNets directly on mesh-rendered depth, normal, and semantic priors, so the control signals stay in-distribution for any deployed city mesh and yield tight geometry–appearance alignment. Building on this, three cross-view consistency mechanisms counter appearance drift: Cascaded Outpainting CtrlNets generate geometrically consistent sparse key views; Appearance Guided Inpainting (AGInpaint) densifies the scene with intermediate views; and Global Consistency Alignment (GCAlign) removes global inconsistencies such as exposure shifts. Concurrently with generation, the 3DGS scene is reconstructed by initializing Gaussian surfels on the mesh surface. On a city-scale benchmark from the UE5 City Sample Project, MeSS reduces cross-view LPIPS by 31% and KID by 36% relative to the best competing method on each metric, achieving an FID of 28.17, and it transfers zero-shot to a real LoD3 city mesh. Once synthesized, the scene can be rendered in diverse styles through relighting and style transfer.</p></div>
       </div>
-    </div>
-  </div>
-</section>
-<!-- End Method -->
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Stylized Videos trhough Relighting or SDEdit</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/videos.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/videos2.mp4" type="video/mp4">
-          </video>
-        </div>
+    </section>
+    <section class="section">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">Method</h2>
+        <div class="content research-content"><p>MeSS follows a sparse-to-dense pipeline. Image ControlNets are trained directly on mesh-rendered depth, normal, and semantic maps, matching the geometric control signals used at inference.</p><figure class="research-figure"><a href="static/images/method.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-size figure: MeSS pipeline: cascaded outpainting, Gaussian field construction, appearance guided inpainting, and global consistency alignment."><img src="static/images/method.png" loading="lazy" alt="MeSS pipeline: cascaded outpainting, Gaussian field construction, appearance guided inpainting, and global consistency alignment."></a><figcaption>Overview of the MeSS pipeline. Mesh geometry guides both image generation and Gaussian surfel placement.</figcaption></figure><ol>
+          <li><strong>Stage I — Sparse key views.</strong> CtrlNet-S generates the initial view. CtrlNet-N then alternates depth-based warping and outpainting backwards along the camera path, conditioning on the preceding generated view to preserve appearance. Gaussian surfels are instantiated directly on the mesh using metric depth and surface normals.</li>
+          <li><strong>Stage II — Dense intermediate views.</strong> Appearance Guided Inpainting (AGInpaint) fills low-opacity regions in views rendered from the coarse Gaussian field. Training-free guidance preserves known RGB content while repairing holes and thin silhouettes; newly inpainted pixels densify the scene.</li>
+          <li><strong>Global Consistency Alignment.</strong> GCAlign alternates diffusion refinement and Gaussian-field updates to harmonize exposure and appearance across views.</li>
+        </ol></div>
       </div>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
-
-
-
-
-<!--BibTex citation -->
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <div class="bibtex-header">
-        <h2 class="title">  BibTeX</h2>
-        <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
-          <i class="fas fa-copy"></i>
-          <span class="copy-text">Copy</span>
-        </button>
+    </section>
+    <section class="section hero is-light">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">Quantitative Results</h2>
+        <div class="content research-content"><p>Evaluation on city-scale sequences from the UE5 City Sample Project, including 200-frame sequences spanning 200 m camera paths. MeSS achieves <strong>0.348 LPIPS, 28.17 FID, and 0.016 KID</strong>: a 31% reduction in cross-view LPIPS and a 36% reduction in KID relative to the best competing method on each metric.</p>
+        <div class="table-container" tabindex="0" role="region" aria-label="Quantitative comparison table">
+          <table class="table is-fullwidth results-table">
+            <caption>Results reported in the paper; lower is better for all metrics.</caption>
+            <thead><tr><th scope="col">Method</th><th scope="col">LPIPS ↓</th><th scope="col">FID ↓</th><th scope="col">KID ↓</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">CityDreamer4D</th><td>—</td><td>88.48</td><td>0.049</td></tr>
+              <tr><th scope="row">WonderWorld†</th><td>0.516</td><td>75.81</td><td>0.076</td></tr>
+              <tr><th scope="row">VistaDream†</th><td>0.508</td><td>72.44</td><td>0.073</td></tr>
+              <tr><th scope="row">StreetScapes</th><td>0.519</td><td>29.93</td><td>0.025</td></tr>
+              <tr class="ours"><th scope="row">MeSS (Ours)</th><td><strong>0.348</strong></td><td><strong>28.17</strong></td><td><strong>0.016</strong></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="result-note">† WonderWorld and VistaDream use the same metric mesh depth and an aligned inpainting diffusion model for matched comparisons. CityDreamer4D and StreetScapes are reference comparisons across different generation settings. StreetScapes values are taken from its paper and evaluated over 32–64 frames; its model uses substantially more training data.</p><figure class="research-figure"><a href="static/images/comparison.jpg" target="_blank" rel="noopener noreferrer" aria-label="Open full-size figure: Qualitative comparison of MeSS with other scene-generation methods."><img src="static/images/comparison.jpg" loading="lazy" alt="Qualitative comparison of MeSS with other scene-generation methods."></a><figcaption>Qualitative comparisons from the paper. Open the figure to inspect street-level details.</figcaption></figure></div>
       </div>
-      <pre id="bibtex-code"><code>@article{chen2025mess,
-  title={Mess: City mesh-guided outdoor scene generation with cross-view consistent diffusion},
-  author={Chen, Xuyang and Zhai, Zhijun and Zhou, Kaixuan and Wang, Zengmao and He, Jianan and Wang, Dong and Zhang, Yanfeng and Westermann, R{\"u}diger and Schindler, Konrad and Meng, Liqiu and others},
-  journal={arXiv preprint arXiv:2508.15169},
-  year={2025}
-}
-    </div>
-</section>
-<!--End BibTex citation -->
-
-
+    </section>
+    <section class="section">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">Zero-Shot Generalization to Real LoD3 Meshes</h2>
+        <div class="content research-content"><p>Without retraining, MeSS transfers to <strong>TUM2Twin</strong>, a real LoD3 mesh of central Munich. Conditioned on mesh-rendered depth, normals, and semantics, generated facades follow the supplied geometry and remain consistent across views.</p><figure class="research-figure"><a href="static/images/lod3.jpg" target="_blank" rel="noopener noreferrer" aria-label="Open full-size figure: TUM2Twin mesh control signals, MeSS street-level views, and Cosmos-Transfer2.5 comparison."><img src="static/images/lod3.jpg" loading="lazy" alt="TUM2Twin mesh control signals, MeSS street-level views, and Cosmos-Transfer2.5 comparison."></a><figcaption>Top: mesh-rendered control signals. Middle: MeSS results along the camera path. Bottom: Cosmos-Transfer2.5 conditioned on the same mesh geometry.</figcaption></figure><p>The remaining limitation is a UE5-style texture bias on real facades. Fine-tuning on real street imagery could reduce this appearance gap.</p></div>
+      </div>
+    </section>
+    <section class="section hero is-light">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">Cross-View Consistency</h2>
+        <div class="content research-content"><div class="columns">
+          <div class="column"><figure class="research-figure"><a href="static/images/aginpaint.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-size figure: Resample on the left and AGInpaint on the right."><img src="static/images/aginpaint.png" loading="lazy" alt="Resample on the left and AGInpaint on the right."></a><figcaption>AGInpaint (right) fills thin regions more faithfully than Resample (left).</figcaption></figure></div>
+          <div class="column"><figure class="research-figure"><a href="static/images/gcalign.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-size figure: Results without GCAlign on the left and with GCAlign on the right."><img src="static/images/gcalign.png" loading="lazy" alt="Results without GCAlign on the left and with GCAlign on the right."></a><figcaption>GCAlign (right) harmonizes seams caused by exposure differences.</figcaption></figure></div>
+        </div><p>GCAlign trades some fine detail for visual coherence. Disabling it slightly improves the reported per-frame metrics (LPIPS 0.346, FID 26.25, KID 0.013), but leaves visible lighting seams. It can be disabled when per-frame fidelity is preferred.</p></div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">Stylized Videos through Relighting or SDEdit</h2>
+        <div class="content research-content"><p>The generated Gaussian scenes support relighting and style transfer to produce diverse rendered videos.</p>
+        <div class="video-grid">
+          <video controls muted loop playsinline preload="metadata" aria-label="MeSS relighting and stylization examples, video 1"><source src="static/videos/videos.mp4" type="video/mp4">Your browser does not support embedded video. <a href="static/videos/videos.mp4">Download video 1</a>.</video>
+          <video controls muted loop playsinline preload="metadata" aria-label="MeSS relighting and stylization examples, video 2"><source src="static/videos/videos2.mp4" type="video/mp4">Your browser does not support embedded video. <a href="static/videos/videos2.mp4">Download video 2</a>.</video>
+        </div></div>
+      </div>
+    </section>
+    <section class="section" id="BibTeX">
+      <div class="container is-max-desktop content">
+        <div class="bibtex-header">
+          <h2 class="title is-3">BibTeX</h2>
+          <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard"><i class="fas fa-copy" aria-hidden="true"></i><span class="copy-text" aria-live="polite">Copy</span></button>
+        </div>
+        <pre id="bibtex-code"><code>@inproceedings{chen2026mess,
+  title={{MeSS}: City Mesh-Guided Outdoor Scene Generation with Cross-View Consistent Diffusion},
+  author={Chen, Xuyang and Zhai, Zhijun and Zhou, Kaixuan and Wang, Zengmao and He, Jianan and Wang, Dong and Zhang, Yanfeng and Sun, Mingwei and Wang, Xuqin and Westermann, R{\&quot;u}diger and Wu, Tao and Schindler, Konrad and Meng, Liqiu},
+  booktitle={German Conference on Pattern Recognition (GCPR)},
+  year={2026},
+  eprint={2508.15169},
+  archivePrefix={arXiv},
+  url={https://arxiv.org/abs/2508.15169}
+}</code></pre>
+      </div>
+    </section>
+  </main>
   <footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-
-          <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-
-        </div>
-      </div>
+    <div class="container is-max-desktop content">
+      <p>This page uses the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank" rel="noopener noreferrer">Academic Project Page Template</a>, adapted from <a href="https://nerfies.github.io" target="_blank" rel="noopener noreferrer">Nerfies</a>. If you reuse the website source, please retain attribution. The website template is licensed under <a rel="license noopener noreferrer" href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a>.</p>
     </div>
-  </div>
-</footer>
-
-<!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
-
-    <!-- End of Statcounter Code -->
-
-  </body>
-  </html>
+  </footer>
+</body>
+</html>
